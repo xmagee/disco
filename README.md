@@ -18,4 +18,4 @@ A Discord bot.
 ## bot commands
 | command   | args | functionality                         |
 |-----------|------|---------------------------------------|
-| `!source` | n/a  |  prints url to this bot's source code |
+| `!source` | n/a  |  prints url of this bot's source code |
