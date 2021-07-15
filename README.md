@@ -16,6 +16,7 @@ A Discord bot.
 * `$ npm run`
 
 ## bot commands
-| command   | args | functionality                         |
-|-----------|------|---------------------------------------|
-| `!source` | n/a  |  prints url of this bot's source code |
+| command   | args | functionality                        |
+|-----------|------|--------------------------------------|
+| `!source` | n/a  | prints url of this bot's source code |
+| `!roll`   | int  | rolls die/dice, prints result(s)     |
