@@ -8,12 +8,9 @@ var Discord = require('discord.js'),
 client.login(process.env.DISCORD_BOT_TOKEN)
 
 client.on('ready', () => {
-    if (process.env.IS_PROD === 'true') {
-        // TODO
-    } else { 
-        console.clear()
-        console.log('Ready 🤖')
-    }
+    console.clear()
+    client.user.setActivity('paint dry', { type: 'WATCHING' });
+    console.log('Ready 🤖')
 })
 
 client.on('message', msg => {
