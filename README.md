@@ -1,0 +1,2 @@
+# disco
+A Discord bot.
