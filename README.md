@@ -13,7 +13,7 @@ A Discord bot.
     ```
     - [how to get discord bot token](https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token) (need to create a bot)
     - [how to get m3o api key](https://m3o.com/settings/keys) (you will need an account)
-* `$ npm run`
+* `$ npm start`
 
 ## bot commands
 | command   | args | functionality                        |
