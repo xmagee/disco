@@ -1,0 +1,17 @@
+{
+  "name": "disco",
+  "version": "1.0.0",
+  "description": "A Discord bot.",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx nodemon index.js"
+  },
+  "author": "xmagee",
+  "license": "ISC",
+  "dependencies": {
+    "@m3o/m3o-node": "^0.0.13",
+    "discord.js": "^12.5.3",
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.12"
+  }
+}
