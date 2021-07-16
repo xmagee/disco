@@ -45,6 +45,10 @@ client.on('message', msg => {
                 util_commands.clear(message_channel)
             break
 
+            case 'echo':
+                simple_commands.echo(message, message_content)
+            break
+
             default: 
             break
         }

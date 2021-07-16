@@ -10,6 +10,7 @@ module.exports = {
 - ${command_prefix}q
 - ${command_prefix}roll
 - ${command_prefix}clear
+- ${command_prefix}echo
 **For help on a specific command, send: \`${command_prefix}help [command_name_here]\`**`)
         } else { 
             switch (message_content[0]) {
@@ -46,6 +47,13 @@ module.exports = {
 **Args:** n/a
 **Functionality:** clears the screen
 **Example:** \`${command_prefix}clear\``)
+                break
+
+                case 'echo':
+                    message.reply(`**Command 'echo':**
+**Args:** any
+**Functionality:** echoes back what was entered as an arg.
+**Example:** \`!echo hello world\``)
                 break
 
                 default: //TODO: 'did you mean... ?'

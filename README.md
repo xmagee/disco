@@ -16,8 +16,9 @@ A Discord bot.
 ## bot commands
 | command   | args          | functionality                                            |
 |-----------|---------------|----------------------------------------------------------|
-| `!source` | n/a           | prints url of this bot's source code                     |
-| `!help`   | n/a or string | prints help command, or prints help for specific command |
-| `!q`      | string[]      | prints results of a search query                         |
-| `!roll`   | n/a or int    | rolls die/dice, prints result(s)                         |
-| `!clear`  | n/a           | clears the screen                                        |
+| `source`  | n/a           | prints url of this bot's source code                     |
+| `help`    | n/a or string | prints help command, or prints help for specific command |
+| `q`       | string[]      | prints results of a search query                         |
+| `roll`    | n/a or int    | rolls die/dice, prints result(s)                         |
+| `clear`   | n/a           | clears the screen                                        |
+| `echo`    | any           | echoes back what was entered as an arg.                  |
