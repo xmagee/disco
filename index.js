@@ -3,7 +3,8 @@ var Discord = require('discord.js'),
     client = new Discord.Client({
         partials: ['MESSAGE']
     }), 
-    axios = require('axios')
+    axios = require('axios'), 
+    command_prefix = process.env.PREFIX_CHAR
 
 client.login(process.env.DISCORD_BOT_TOKEN)
 
@@ -14,9 +15,9 @@ client.on('ready', () => {
 })
 
 client.on('message', msg => {
-    if (msg.content.charAt(0) === process.env.PREFIX_CHAR) {
+    if (msg.content.charAt(0) === command_prefix) {
         var message = msg, 
-            message_content = message.content.replace(process.env.PREFIX_CHAR, '').split(' '), 
+            message_content = message.content.replace(command_prefix, '').split(' '), 
             message_channel = message.channel
 
         switch(message_content[0]) {
@@ -28,47 +29,47 @@ client.on('message', msg => {
                 message_content.shift()
                 if (message_content.length === 0) {
                     message.reply(`**Available commands:**
-- !source 
-- !help
-- !q
-- !roll
-- !clear
-**For help on a specific command, send: \`!help [command_name_here]\`**`)
+- ${command_prefix}source 
+- ${command_prefix}help
+- ${command_prefix}q
+- ${command_prefix}roll
+- ${command_prefix}clear
+**For help on a specific command, send: \`${command_prefix}help [command_name_here]\`**`)
                 } else { 
                     switch (message_content[0]) {
                         case 'source':
                             message.reply(`**Command 'source':**
 **Args:** n/a
 **Functionaliy:** prints url of this bot's source code
-**Example:** \`!source\``)
+**Example:** \`${command_prefix}source\``)
                         break
                         
                         case 'help':
                             message.reply(`**Command: 'help':**
 **Args:** n/a, or the name of an available command
 **Functionaliy:** shows help command, or prints help for specific command
-**Examples:** \`!help\` or \`!help roll\``)
+**Examples:** \`${command_prefix}help\` or \`${command_prefix}help roll\``)
                         break
 
                         case 'q':
                             message.reply(`**Command 'q':**
 **Args:** a search query
 **Functionality:** prints results of a search query
-**Example:** \`!q system of a down\``)
+**Example:** \`${command_prefix}q system of a down\``)
                         break
 
                         case 'roll':
                             message.reply(`**Command 'roll':**
 **Args:** n/a, or number of dice to roll
 **Functionality:** rolls die/dice, prints result(s)
-**Examples:** \`!roll\` or \`!roll 3\``)
+**Examples:** \`${command_prefix}roll\` or \`${command_prefix}roll 3\``)
                         break
 
                         case 'clear':
                             message.reply(`**Command 'clear':**
 **Args:** n/a
 **Functionality:** clears the screen
-**Example:** \`!clear\``)
+**Example:** \`${command_prefix}clear\``)
                         break
 
                         default: //TODO: 'did you mean... ?'
