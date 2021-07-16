@@ -9,7 +9,6 @@
   "author": "xmagee",
   "license": "ISC",
   "dependencies": {
-    "@m3o/m3o-node": "^0.0.13",
     "axios": "^0.21.1",
     "discord.js": "^12.5.3",
     "dotenv": "^10.0.0",

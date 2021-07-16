@@ -4,7 +4,6 @@ var Discord = require('discord.js'),
         partials: ['MESSAGE']
     }), 
     axios = require('axios')
-    //m3o = require('@m3o/m3o-node'), 
 
 client.login(process.env.DISCORD_BOT_TOKEN)
 
