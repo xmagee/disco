@@ -2,7 +2,8 @@ require('dotenv').config()
 var Discord = require('discord.js'),
     client = new Discord.Client({
         partials: ['MESSAGE']
-    })
+    }), 
+    axios = require('axios')
     //m3o = require('@m3o/m3o-node'), 
 
 client.login(process.env.DISCORD_BOT_TOKEN)
@@ -21,6 +22,30 @@ client.on('message', msg => {
         switch(message_content[0]) {
             case 'source':
                 message_channel.send('<https://github.com/xmagee/disco>')
+            break
+
+            case 'q':
+                message_content.shift()
+                var search_query = message_content.join(' ')
+                if (search_query !== undefined) {
+                    axios.get(`https://api.duckduckgo.com/?format=json&q=${search_query}`)
+                        .then(r => {
+                            if (r.status === 200 && r.data.Abstract !== '') {
+                                message_channel.send(`From ${r.data.AbstractSource} - <${r.data.AbstractURL}>
+                                \n${r.data.Abstract}`)
+                            } else { 
+                                message_channel.send('Nothing found.')
+                            }
+                        })
+                        .catch(e => {
+                            console.log(e)
+                            message_channel.send('Error. See console for information.')
+                        })
+                } else { 
+                    message_channel.send('No search args given.')
+                }
+                
+                // message_channel.send('ok')
             break
 
             case 'roll':
