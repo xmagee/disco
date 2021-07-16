@@ -10,13 +10,14 @@ A Discord bot.
     PREFIX_CHAR='!'
     DISCORD_BOT_TOKEN=discord_bot_token_here
     ```
-    [how to get discord bot token](https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token) (need to create a bot)
+    [get a discord bot token](https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token) (will need a discord account)
 * `$ npm start`
 
 ## bot commands
-| command   | args     | functionality                        |
-|-----------|----------|--------------------------------------|
-| `!source` | n/a      | prints url of this bot's source code |
-| `!roll`   | int      | rolls die/dice, prints result(s)     |
-| `!q`      | string[] | prints results of a search query     |
-| `!clear`  | n/a      | clears the screen                    |
+| command   | args          | functionality                                            |
+|-----------|---------------|----------------------------------------------------------|
+| `!source` | n/a           | prints url of this bot's source code                     |
+| `!help`   | n/a or string | prints help command, or prints help for specific command |
+| `!q`      | string[]      | prints results of a search query                         |
+| `!roll`   | n/a or int    | rolls die/dice, prints result(s)                         |
+| `!clear`  | n/a           | clears the screen                                        |
