@@ -49,6 +49,10 @@ client.on('message', msg => {
                 simple_commands.echo(message, message_content)
             break
 
+            case 'invite': 
+                simple_commands.server_invite_link(message)
+            break
+
             default: 
             break
         }

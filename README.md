@@ -9,6 +9,7 @@ A Discord bot.
     IS_PROD=false
     PREFIX_CHAR='!'
     DISCORD_BOT_TOKEN=discord_bot_token_here
+    CURRENT_SERVER_INVITE_LINK=https://discord.gg/invite_code_here
     ```
     [get a discord bot token](https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token) (will need a discord account)
 * `$ npm start`
@@ -22,3 +23,4 @@ A Discord bot.
 | `roll`    | n/a or int    | rolls die/dice, prints result(s)                         |
 | `clear`   | n/a           | clears the screen                                        |
 | `echo`    | any           | echoes back what was entered as an arg.                  |
+| `invite`  | n/a           | prints an invite link for the server                     |

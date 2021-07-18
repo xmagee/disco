@@ -11,6 +11,7 @@ module.exports = {
 - ${command_prefix}roll
 - ${command_prefix}clear
 - ${command_prefix}echo
+- ${command_prefix}invite
 **For help on a specific command, send: \`${command_prefix}help [command_name_here]\`**`)
         } else { 
             switch (message_content[0]) {
@@ -53,7 +54,14 @@ module.exports = {
                     message.reply(`**Command 'echo':**
 **Args:** any
 **Functionality:** echoes back what was entered as an arg.
-**Example:** \`!echo hello world\``)
+**Example:** \`${command_prefix}echo hello world\``)
+                break
+
+                case 'invite': 
+                    message.reply(`**Command 'invite': **
+**Args:** n/a
+**Functionality:** prints an invite link for the server
+**Example:** \`${command_prefix}invite\``)
                 break
 
                 default: //TODO: 'did you mean... ?'
