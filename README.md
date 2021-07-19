@@ -1,6 +1,8 @@
 # disco
 A Discord bot.
 
+[![CodeFactor](https://www.codefactor.io/repository/github/xmagee/disco/badge)](https://www.codefactor.io/repository/github/xmagee/disco)
+
 ## run this
 * `$ git clone git@github.com:xmagee/disco.git && cd disco`
 * `$ npm install`
